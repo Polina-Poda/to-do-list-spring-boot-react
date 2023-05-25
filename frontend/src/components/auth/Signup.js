@@ -17,7 +17,7 @@ function Signup({isAuthenticated, setIsAuthenticated}) {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://poda-polina-blue-green-lb-1504784492.us-east-1.elb.amazonaws.com/api/todo', {username, password});
+      const response = await axios.post('http://poda-polina-blue-green-lb-1504784492.us-east-1.elb.amazonaws.com/api/auth/signup', {username, password});
       sessionStorage.setItem('token', response.data.token);
       sessionStorage.setItem('name', response.data.username);
       setIsAuthenticated(true);
