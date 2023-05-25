@@ -20,7 +20,7 @@ export default function Landing({isAuthenticated, setIsAuthenticated}) {
   useEffect(() => {
     async function getAndSetNumberAllTodo() {
       try{
-        const response = await axios.get('http://34.199.55.251:3001/api/todo/count', {
+        const response = await axios.get('http://poda-polina-blue-green-lb-1504784492.us-east-1.elb.amazonaws.com/api/todo', {
           headers: {
             'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
           }
@@ -38,7 +38,7 @@ export default function Landing({isAuthenticated, setIsAuthenticated}) {
 
     async function getAndSetNumberAllTodoNotCompleted() {
       try{
-        const response = await axios.get('http://34.199.55.251:3001/api/todo/count?isCompleted=false', {
+        const response = await axios.get('http://poda-polina-blue-green-lb-1504784492.us-east-1.elb.amazonaws.com/api/todo', {
           headers: {
             'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
           }

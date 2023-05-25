@@ -19,7 +19,7 @@ function AddTodo({isAuthenticated, setIsAuthenticated}) {
     e.preventDefault();
 
     try {
-      await axios.post('http://34.235.189.52:3001/api/todo', {title, targetDate}, {
+      await axios.post('http://poda-polina-blue-green-lb-1504784492.us-east-1.elb.amazonaws.com/api/todo', {title, targetDate}, {
         headers: {
           'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
         }
